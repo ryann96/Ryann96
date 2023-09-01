@@ -331,10 +331,9 @@ courses: { compsci: {week: 2} }
         }
         /* Dot for Food or Snake part */
         /////////////////////////////////////////////////////////////
-        let activeDot = function(x, y){
-            ctx.fillStyle = "#FFFFFF";
-            ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
-        }
+        let appleDot = function(x, y){
+            ctx.font = “16px Arial”; // Adjust the font size here (e.g., 10px, 12px)
+            ctx.fillText(“:apple:”, x * BLOCK, y * BLOCK);
         /* Random food placement */
         /////////////////////////////////////////////////////////////
         let addFood = function(){
