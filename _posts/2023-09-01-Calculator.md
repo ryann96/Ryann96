@@ -8,7 +8,7 @@ type: hacks
 courses: { compsci: {week: 2} }
 ---
 
-<!DOCTYPE html>
+
 <html>
 <head>
     <title>Simple Calculator</title>
