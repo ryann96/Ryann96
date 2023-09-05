@@ -11,7 +11,7 @@ courses: { compsci: {week: 2} }
 <html>
 
 <body>
-    <h1>Week 2 Summary</h1>
+
 
 <style>
   .multiline-paragraph {
