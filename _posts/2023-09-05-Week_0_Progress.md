@@ -4,7 +4,7 @@ comments: false
 layout: post
 title: Progress
 description: Things that happened in Week 0
-type: Hacks
+type: hacks
 courses: { compsci: {week: 0} }
 ---
 
