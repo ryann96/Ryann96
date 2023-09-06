@@ -2,8 +2,8 @@
 toc: True
 comments: True
 layout: post
-title: IPYNB Table, Code
-description: Example!!! This sample shows markdown cell, markdown table, markdown code fencing, and code cells.
+title: My first Image
+description: My first Image
 courses: {'compsci': {'week': 1}}
 type: hacks
 ---
