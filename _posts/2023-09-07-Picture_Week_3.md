@@ -4,7 +4,7 @@ comments: false
 layout: post
 title: Week 3 Photo
 description: Progress on week 3
-type: tangibles
+type: hacks
 courses: { compsci: {week: 3} }
 ---
 
