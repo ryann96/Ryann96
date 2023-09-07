@@ -328,6 +328,25 @@ courses: { compsci: {week: 2} }
                         snake_next_dir = 2; // then switch down
                     break;
             }
+                // test key and switch direction
+            switch(key) {
+                case 65:    // 'A' key (move left)
+                    if (snake_dir !== 1)    // not right
+                        snake_next_dir = 3; // then switch left
+                    break;
+                case 87:    // 'W' key (move up)
+                    if (snake_dir !== 2)    // not down
+                        snake_next_dir = 0; // then switch up
+                    break;
+                case 68:    // 'D' key (move right)
+                    if (snake_dir !== 3)    // not left
+                snake_next_dir = 1; // then switch right
+                    break;
+                case 83:    // 'S' key (move down)
+                if (snake_dir !== 0)    // not up
+                snake_next_dir = 2; // then switch down
+                    break;
+    }
         }
         /* Dot for Food or Snake part */
         /////////////////////////////////////////////////////////////
