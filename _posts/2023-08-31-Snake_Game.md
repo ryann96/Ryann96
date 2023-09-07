@@ -331,9 +331,13 @@ courses: { compsci: {week: 2} }
         }
         /* Dot for Food or Snake part */
         /////////////////////////////////////////////////////////////
-         let activeDot = function(x, y){
-            ctx.fillStyle = "green";
-            ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
+        let activeDot = function(x, y, isFood) {
+        if (isFood) {
+        ctx.fillStyle = red;
+        } else {
+        ctx.fillStyle = green;
+        }
+        ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
         }
         /* Random food placement */
         /////////////////////////////////////////////////////////////
