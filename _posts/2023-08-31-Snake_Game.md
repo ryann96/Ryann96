@@ -279,11 +279,7 @@ courses: { compsci: {week: 2} }
                 activeDot(snake[i].x, snake[i].y);
             }
             // Paint food
-            // Insert the appleDot function here
-        let appleDot = function(x, y){
-        ctx.font = "16px Arial"; // Adjust the font size here (e.g., 10px, 12px)
-        ctx.fillText("🍏", x * BLOCK, y * BLOCK);
-    }
+            activeDot(food.x, food.y);
             // Debug
             //document.getElementById("debug").innerHTML = snake_dir + " " + snake_next_dir + " " + snake[0].x + " " + snake[0].y;
             // Recursive call after speed delay, déjà vu
