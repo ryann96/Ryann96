@@ -16,7 +16,7 @@ courses: { compsci: {week: 3} }
 <style>
   .multiline-paragraph {
     width: 1000px; /* Set the desired width */
-    white-space: pre-wrap; /* Allow text to wrap within the paragraph */
+n    white-space: pre-wrap; /* Allow text to wrap within the paragraph */
   }
 </style>
 
