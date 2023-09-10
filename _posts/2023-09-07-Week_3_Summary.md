@@ -21,7 +21,7 @@ n    white-space: pre-wrap; /* Allow text to wrap within the paragraph */
 </style>
 
  <p class="multiline-paragraph"> 
- During week 3, I finished the hacks, plans, and tangibles columns on my website. I changed the coplor of the snake to green and the color of the dot to red in the snake game.
+ During week 3, I finished the hacks, plans, and tangibles columns on my website. I changed the coplor of the snake to green and the color of the dot to red in the snake game. Also, I added a list for a few holidays.
  </p>
 
 </body>
