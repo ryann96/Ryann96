@@ -1,3 +1,13 @@
+---
+toc: true
+comments: false
+layout: post
+title: Calculator 2
+description: Calculator V2
+type: hacks
+courses: { compsci: {week: 4} }
+---
+
 %%html
 
 <!-- Help Message -->
