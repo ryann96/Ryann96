@@ -61,22 +61,6 @@ function calculator(event) {
     }
 }
 
-// Calculates a letter grade based on the average score
-function calculateGrade(average) {
-    if (average >= 90) {
-        return 'A';
-    } else if (average >= 80) {
-        return 'B';
-    } else if (average >= 70) {
-        return 'C';
-    } else if (average >= 60) {
-        return 'D';
-    } else {
-        return 'F';
-    }
-}
-
-
 // Creates a new input box
 function newInputLine(index) {
 
