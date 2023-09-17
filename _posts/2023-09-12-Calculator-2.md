@@ -21,7 +21,7 @@ courses: { compsci: {week: 4} }
 </ul>
 <!-- Rows added using scores ID -->
 <div id="scores">
-    <!-- JavaScript generated inputs -->
+    <!-- JavaScript-generated inputs go here -->
 </div>
 
 <script>
@@ -52,7 +52,7 @@ function calculator(event) {
         if (count > 0) {
             var average = (total / count).toFixed(2);
             document.getElementById('average').innerHTML = average;
-            document.getElementById('grade').innerHTML = calculateGrade(average);
+            document.getElementById('grade').innerHTML = calculateGrade(parseFloat(average));
         } else {
             document.getElementById('average').innerHTML = "0.0";
             document.getElementById('grade').innerHTML = "N/A";
@@ -84,6 +84,9 @@ function calculateGrade(average) {
 function newInputLine(index) {
     // ... (your existing code for creating input lines)
 }
+
+// Attach the event handler to the document body
+document.body.addEventListener('keydown', calculator);
 
 // Creates 1st input box on Window load
 newInputLine(0);
