@@ -8,6 +8,8 @@ type: hacks
 courses: { compsci: {week: 4} }
 ---
 
+%%html
+
 <!-- Help Message -->
 <h3>Input scores, press tab to add each new number.</h3>
 <!-- Totals -->
@@ -16,12 +18,11 @@ courses: { compsci: {week: 4} }
     Total : <span id="total">0.0</span>
     Count : <span id="count">0.0</span>
     Average : <span id="average">0.0</span>
-    Grade : <span id="grade">N/A</span>
 </li>
 </ul>
 <!-- Rows added using scores ID -->
 <div id="scores">
-    <!-- JavaScript-generated inputs go here -->
+    <!-- javascript generated inputs -->
 </div>
 
 <script>
@@ -50,12 +51,9 @@ function calculator(event) {
         document.getElementById('count').innerHTML = count;
 
         if (count > 0) {
-            var average = (total / count).toFixed(2);
-            document.getElementById('average').innerHTML = average;
-            document.getElementById('grade').innerHTML = calculateGrade(parseFloat(average));
+            document.getElementById('average').innerHTML = (total / count).toFixed(2);
         } else {
             document.getElementById('average').innerHTML = "0.0";
-            document.getElementById('grade').innerHTML = "N/A";
         }
 
         // adds newInputLine, only if all array values satisfy parseFloat 
@@ -65,29 +63,34 @@ function calculator(event) {
     }
 }
 
-// Calculates a letter grade based on the average score
-function calculateGrade(average) {
-    if (average >= 90) {
-        return 'A';
-    } else if (average >= 80) {
-        return 'B';
-    } else if (average >= 70) {
-        return 'C';
-    } else if (average >= 60) {
-        return 'D';
-    } else {
-        return 'F';
-    }
-}
-
 // Creates a new input box
 function newInputLine(index) {
-    // ... (your existing code for creating input lines)
-}
 
-// Attach the event handler to the document body
-document.body.addEventListener('keydown', calculator);
+    // Add a label for each score element
+    var title = document.createElement('label');
+    title.htmlFor = index;
+    title.innerHTML = index + ". ";    
+    document.getElementById("scores").appendChild(title); // add to HTML
+
+    // Setup score element and attributes
+    var score = document.createElement("input"); // input element
+    score.id =  index;  // id of input element
+    score.onkeydown = calculator // Each key triggers event (using function as a value)
+    score.type = "number"; // Use text type to allow typing multiple characters
+    score.name = "score";  // name is used to group all "score" elements (array)
+    score.style.textAlign = "right";
+    score.style.width = "5em";
+    document.getElementById("scores").appendChild(score);  // add to HTML
+
+    // Create and add blank line after input box
+    var br = document.createElement("br");  // line break element
+    document.getElementById("scores").appendChild(br); // add to HTML
+
+    // Set focus on the new input line
+    document.getElementById(index).focus();
+}
 
 // Creates 1st input box on Window load
 newInputLine(0);
+
 </script>
