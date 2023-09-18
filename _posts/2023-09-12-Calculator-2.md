@@ -18,6 +18,10 @@ courses: { compsci: {week: 4} }
     Average : <span id="average">0.0</span>
 </li>
 </ul>
+
+<!-- Clear Button -->
+<button onclick="clearAll()">Clear</button>
+
 <!-- Rows added using scores ID -->
 <div id="scores">
     <!-- javascript generated inputs -->
@@ -59,6 +63,18 @@ function calculator(event) {
             newInputLine(count); // make a new input line
         }
     }
+}
+
+
+function clearAll() {
+    var array = document.getElementsByName('score');
+    for (var i = 0; i < array.length; i++) {
+        array[i].value = ""; // Clear input values
+    }
+    document.getElementById('total').innerHTML = "0.0"; // Reset totals
+    document.getElementById('count').innerHTML = "0";
+    document.getElementById('average').innerHTML = "0.0";
+    document.getElementById('grade').innerHTML = "N/A";
 }
 
 // Creates a new input box
