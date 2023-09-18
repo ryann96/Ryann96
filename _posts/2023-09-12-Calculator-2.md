@@ -109,7 +109,13 @@ function newInputLine(index) {
 }
 
 // Attach the event handler to the document body
-document.body.addEventListener('keydown', calculator);
+document.addEventListener('keydown', function(event) {
+    var key = event.key;
+    if (key === "Tab" || key === "Enter") {
+        calculator(event);
+    }
+});
+
 
 
 // Creates 1st input box on Window load
