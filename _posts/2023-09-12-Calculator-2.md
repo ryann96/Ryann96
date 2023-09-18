@@ -16,7 +16,6 @@ courses: { compsci: {week: 4} }
     Total : <span id="total">0.0</span>
     Count : <span id="count">0.0</span>
     Average : <span id="average">0.0</span>
-    Grade : <span id="grade">N/A</span>
 </li>
 </ul>
 <!-- Rows added using scores ID -->
@@ -50,34 +49,15 @@ function calculator(event) {
         document.getElementById('count').innerHTML = count;
 
         if (count > 0) {
-            var average = (total / count).toFixed(2);
             document.getElementById('average').innerHTML = (total / count).toFixed(2);
-            document.getElementById('grade').innerHTML = calculateGrade(parseFloat(average));
-        } else {
         } else {
             document.getElementById('average').innerHTML = "0.0";
-            document.getElementById('grade').innerHTML = "N/A";
         }
 
         // adds newInputLine, only if all array values satisfy parseFloat 
         if (count === document.getElementsByName('score').length) {
             newInputLine(count); // make a new input line
         }
-    }
-}
-
-// Calculates a letter grade based on the average score
-function calculateGrade(average) {
-    if (average >= 90) {
-        return 'A';
-    } else if (average >= 80) {
-        return 'B';
-    } else if (average >= 70) {
-        return 'C';
-    } else if (average >= 60) {
-        return 'D';
-    } else {
-        return 'F';
     }
 }
 
@@ -107,16 +87,6 @@ function newInputLine(index) {
     // Set focus on the new input line
     document.getElementById(index).focus();
 }
-
-// Attach the event handler to the document body
-document.addEventListener('keydown', function(event) {
-    var key = event.key;
-    if (key === "Tab" || key === "Enter") {
-        calculator(event);
-    }
-});
-
-
 
 // Creates 1st input box on Window load
 newInputLine(0);
