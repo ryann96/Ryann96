@@ -74,7 +74,6 @@ function clearAll() {
     document.getElementById('total').innerHTML = "0.0"; // Reset totals
     document.getElementById('count').innerHTML = "0";
     document.getElementById('average').innerHTML = "0.0";
-    document.getElementById('grade').innerHTML = "N/A";
 }
 
 // Creates a new input box
