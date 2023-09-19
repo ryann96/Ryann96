@@ -19,7 +19,6 @@ Hack 3: Implement 1 number operation (ie SQRT)
 HTML implementation of the calculator. 
 -->
 
-{% include nav_home.html %}
 
 <!-- 
     Style and Action are aligned with HRML class definitions
