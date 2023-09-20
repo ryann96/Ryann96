@@ -215,4 +215,48 @@ vantaInstance({
   touchControls: true,
   gyroControls: false
 });
+
+// Keyboard support
+document.addEventListener("keydown", function(event) {
+  // Define key mappings for digits and operators
+  const keyMappings = {
+    "0": "0",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9",
+    "+": "+",
+    "-": "-",
+    "*": "*",
+    "/": "/",
+    ".": ".",
+    Enter: "=",
+    "=": "=",
+    Backspace: "AC",
+    Escape: "AC",
+  };
+
+  // Get the mapped action for the pressed key
+  const key = keyMappings[event.key];
+
+  // If a mapped action exists, perform the corresponding action
+  if (key) {
+    if (key === "AC") {
+      clearCalc();
+    } else if (key === "=") {
+      equal();
+    } else {
+      // Check if the key represents a number or operator
+      if (!isNaN(key) || key === "." || key === "+" || key === "-" || key === "*" || key === "/") {
+        number(key);
+      }
+    }
+  }
+});
+
 </script>
