@@ -8,6 +8,8 @@ type: hacks
 courses: { compsci: {week: 2} }
 ---
 
+
+
 <!-- 
 Hack 0: Right justify result
 Hack 1: Test conditions on small, big, and decimal numbers, report on findings. Fix issues.
@@ -18,7 +20,6 @@ Hack 3: Implement 1 number operation (ie SQRT)
 <!-- 
 HTML implementation of the calculator. 
 -->
-
 
 <!-- 
     Style and Action are aligned with HRML class definitions
