@@ -22,6 +22,9 @@ courses: { compsci: {week: 4} }
 <!-- Clear Button -->
 <button onclick="clearAll()">Clear</button>
 
+<!-- Grade Button -->
+<button onclick="calculateGrade()">Calculate Grade</button>
+
 <!-- Rows added using scores ID -->
 <div id="scores">
     <!-- javascript generated inputs -->
@@ -74,6 +77,28 @@ function clearAll() {
     document.getElementById('total').innerHTML = "0.0"; // Reset totals
     document.getElementById('count').innerHTML = "0";
     document.getElementById('average').innerHTML = "0.0";
+}
+
+function calculateGrade(average) {
+    if (average >= 95) {
+        return 'A+';
+    } else if (average >= 90) {
+        return 'A';
+    } else if (average >= 85) {
+        return 'A-';
+    } else if (average >= 80) {
+        return 'B+';
+    } else if (average >= 75) {
+        return 'B';
+    } else if (average >= 70) {
+        return 'B-';
+    } else if (average >= 65) {
+        return 'C+';
+    } else if (average >= 60) {
+        return 'C';
+    } else {
+        return 'F';
+    }
 }
 
 // Creates a new input box

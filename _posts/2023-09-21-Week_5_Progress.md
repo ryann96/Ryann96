@@ -38,7 +38,7 @@ The image of the week 2 calculator that I copied from the teacher repository.
 </style>
 
 <p class="multiline-paragraph"> 
-The image of the JS Input Calculator with a clear button I added from CHatGPT.
+The image of the JS Input Calculator with a clear button I added from ChatGPT.
 
 </p>
 </body>
