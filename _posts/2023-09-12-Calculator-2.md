@@ -79,7 +79,9 @@ function clearAll() {
     document.getElementById('average').innerHTML = "0.0";
 }
 
+// Calculates and displays the grade based on the average score
 function calculateGrade() {
+    console.log("Button clicked"); // Debugging line
     var average = parseFloat(document.getElementById('average').innerHTML);
     
     if (!isNaN(average)) {
