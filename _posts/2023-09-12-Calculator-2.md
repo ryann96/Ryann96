@@ -79,23 +79,27 @@ function clearAll() {
     document.getElementById('average').innerHTML = "0.0";
 }
 
-function calculateGrade(average) {
-    if (average >= 95) {
-        return 'A+';
-    } else if (average >= 90) {
+function calculateGrade() {
+    var average = parseFloat(document.getElementById('average').innerHTML);
+    
+    if (!isNaN(average)) {
+        var grade = calculateLetterGrade(average);
+        document.getElementById('grade').innerHTML = grade;
+    } else {
+        document.getElementById('grade').innerHTML = "N/A";
+    }
+}
+
+// Calculates a letter grade based on the average score
+function calculateLetterGrade(average) {
+    if (average >= 90) {
         return 'A';
-    } else if (average >= 85) {
-        return 'A-';
     } else if (average >= 80) {
-        return 'B+';
-    } else if (average >= 75) {
         return 'B';
     } else if (average >= 70) {
-        return 'B-';
-    } else if (average >= 65) {
-        return 'C+';
-    } else if (average >= 60) {
         return 'C';
+    } else if (average >= 60) {
+        return 'D';
     } else {
         return 'F';
     }
