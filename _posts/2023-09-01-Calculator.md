@@ -44,6 +44,8 @@ HTML implementation of the calculator.
   
     display: flex;
     align-items: center;
+    color: white; /* Set the text color to white */
+    background-color: black; /* Set the background color to black */
   }
 
    /* Updated style for calculator number buttons */
@@ -51,11 +53,11 @@ HTML implementation of the calculator.
     /* Number buttons */
     grid-column: span 1;
     grid-row: span 1;
-    background-color: blue;
+    background-color: white; /* Change the background color to white */
     border-radius: 10px;
     padding: 0.25em;
     font-size: 20px;
-    border: 5px white;
+    border: 5px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
