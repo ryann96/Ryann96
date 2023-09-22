@@ -73,9 +73,9 @@ courses: { compsci: {week: 4} }
   }
 
   function clearAll() {
-    var array = document.getElementsByName('score');
+   var array = document.getElementsByName('score');
     for (var i = 0; i < array.length; i++) {
-      array[i].value = ""; // Clear input values
+        array[i].value = "0"; // Set input values to 0
     }
     document.getElementById('total').innerHTML = "0.0"; // Reset totals
     document.getElementById('count').innerHTML = "0";
