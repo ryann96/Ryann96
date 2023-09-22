@@ -73,7 +73,17 @@ courses: { compsci: {week: 4} }
   }
 
   function clearAll() {
-   var array = document.getElementsByName('score');
+    var array = document.getElementsByName('score');
+    for (var i = 1; i < array.length; i++) {
+        // Remove dynamically added input elements
+        var inputElement = document.getElementById(i);
+        var labelElement = inputElement.previousSibling;
+        var brElement = inputElement.nextSibling;
+        document.getElementById('scores').removeChild(inputElement);
+        document.getElementById('scores').removeChild(labelElement);
+        document.getElementById('scores').removeChild(brElement);
+    }
+    
     for (var i = 0; i < array.length; i++) {
         array[i].value = "0"; // Set input values to 0
     }
@@ -81,7 +91,10 @@ courses: { compsci: {week: 4} }
     document.getElementById('count').innerHTML = "0";
     document.getElementById('average').innerHTML = "0.0";
     document.getElementById('grade').innerHTML = "N/A"; // Reset the letter grade
-  }
+    
+    // Re-add the 0th input box
+    newInputLine(0);
+}
 
   // Calculates a letter grade based on the average score
   function calculateLetterGrade(average) {
