@@ -51,16 +51,17 @@ HTML implementation of the calculator.
     /* Number buttons */
     grid-column: span 1;
     grid-row: span 1;
-    background-color: white; /* Change the background color to white */
+    background-color: blue;
     border-radius: 10px;
     padding: 0.25em;
     font-size: 20px;
-    border: 5px solid black;
+    border: 5px white;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
   }
+  
 </style>
 
 <!-- Add a container for the animation -->
@@ -231,6 +232,7 @@ vantaInstance({
   touchControls: true,
   gyroControls: false
 });
+
 
 // Keyboard support
 document.addEventListener("keydown", function(event) {
