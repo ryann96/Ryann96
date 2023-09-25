@@ -14,12 +14,12 @@ courses: { compsci: {week: 5} }
             <img id="characterSprite" src="/Ryann96/images/Sprites.png">  // change sprite here
         </canvas>
         <div id="controls"> <!--basic radio buttons which can be used to check whether each individual animaiton works -->
-            <input type="radio" name="animation" id="idle" checked>
-            <label for="idle">Idle</label><br>
-            <input type="radio" name="animation" id="barking">
-            <label for="barking">Barking</label><br>
-            <input type="radio" name="animation" id="walking">
-            <label for="walking">Walking</label><br>
+            <input type="radio" name="animation" id="straight" checked>
+            <label for="straight">Straight</label><br>
+            <input type="radio" name="animation" id="left">
+            <label for="leftg">Left</label><br>
+            <input type="radio" name="animation" id="right">
+            <label for="right">Right</label><br>
         </div>
     </div>
 </body>
@@ -31,7 +31,7 @@ courses: { compsci: {week: 5} }
         const ctx = canvas.getContext('2d');
         const SPRITE_WIDTH = 80;  // matches sprite pixel width
         const SPRITE_HEIGHT = 72; // matches sprite pixel height
-        const FRAME_LIMIT = 1;  // matches number of frames per sprite row, this code assume each row is same
+        const FRAME_LIMIT = 4;  // matches number of frames per sprite row, this code assume each row is same
 
         const SCALE_FACTOR = 2;  // control size of sprite on canvas
         canvas.width = SPRITE_WIDTH * SCALE_FACTOR;
@@ -82,13 +82,13 @@ courses: { compsci: {week: 5} }
             if (event.target.tagName === 'INPUT') {
                 const selectedAnimation = event.target.id;
                 switch (selectedAnimation) {
-                    case 'idle':
+                    case 'Straight':
                         character.frameY = 0;
                         break;
-                    case 'barking':
+                    case 'Left':
                         character.frameY = 1;
                         break;
-                    case 'walking':
+                    case 'Right':
                         character.frameY = 2;
                         break;
                     default:
