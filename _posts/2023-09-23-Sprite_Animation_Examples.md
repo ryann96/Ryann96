@@ -14,12 +14,12 @@ courses: { compsci: {week: 5} }
             <img id="characterSprite" src="/Ryann96/images/Sprites.png">  // change sprite here
         </canvas>
         <div id="controls"> <!--basic radio buttons which can be used to check whether each individual animaiton works -->
-            <input type="radio" name="animation" id="straight" checked>
-            <label for="straight">Straight</label><br>
-            <input type="radio" name="animation" id="left">
-            <label for="left">Left</label><br>
-            <input type="radio" name="animation" id="right">
-            <label for="right">Right</label><br>
+            <input type="radio" name="animation" id="idle" checked>
+            <label for="idle">Idle</label><br>
+            <input type="radio" name="animation" id="barking">
+            <label for="barking">Barking</label><br>
+            <input type="radio" name="animation" id="walking">
+            <label for="walking">Walking</label><br>
         </div>
     </div>
 </body>
@@ -82,13 +82,13 @@ courses: { compsci: {week: 5} }
             if (event.target.tagName === 'INPUT') {
                 const selectedAnimation = event.target.id;
                 switch (selectedAnimation) {
-                    case 'Straight':
+                    case 'idle':
                         character.frameY = 0;
                         break;
-                    case 'Left':
+                    case 'barking':
                         character.frameY = 1;
                         break;
-                    case 'Right':
+                    case 'walking':
                         character.frameY = 2;
                         break;
                     default:
