@@ -17,7 +17,7 @@ courses: { compsci: {week: 5} }
             <input type="radio" name="animation" id="straight" checked>
             <label for="straight">Straight</label><br>
             <input type="radio" name="animation" id="left">
-            <label for="leftg">Left</label><br>
+            <label for="left">Left</label><br>
             <input type="radio" name="animation" id="right">
             <label for="right">Right</label><br>
         </div>
