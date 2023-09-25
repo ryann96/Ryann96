@@ -4,7 +4,7 @@ comments: false
 layout: post
 title: Sprite Animation
 description: Animating Sprites
-type: tangibles
+type: hacks
 courses: { compsci: {week: 5} }
 ---
 
@@ -48,7 +48,7 @@ courses: { compsci: {week: 5} }
                 this.frameY = 0;
             }
 
-            // draw dog object
+            // draw sprite object
             draw(context) {
                 context.drawImage(
                     this.image,
@@ -103,10 +103,10 @@ courses: { compsci: {week: 5} }
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             // Draws the current frame of the sprite.
-            dog.draw(ctx);
+            sprite.draw(ctx);
 
             // Updates the `frameX` property to prepare for the next frame in the sprite sheet.
-            dog.update();
+            sprite.update();
 
             // Uses `requestAnimationFrame` to synchronize the animation loop with the display's refresh rate,
             // ensuring smooth visuals.
