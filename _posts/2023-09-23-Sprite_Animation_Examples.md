@@ -83,13 +83,13 @@ courses: { compsci: {week: 5} }
                 const selectedAnimation = event.target.id;
                 switch (selectedAnimation) {
                     case 'idle':
-                        dog.frameY = 0;
+                        character.frameY = 0;
                         break;
                     case 'barking':
-                        dog.frameY = 1;
+                        character.frameY = 1;
                         break;
                     case 'walking':
-                        dog.frameY = 2;
+                        character.frameY = 2;
                         break;
                     default:
                         break;
