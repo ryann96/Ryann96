@@ -11,7 +11,7 @@ courses: { compsci: {week: 5} }
 <body>
     <div>
         <canvas id="spriteContainer"> <!-- Within the base div is a canvas. An HTML canvas is used only for graphics. It allows the user to access some basic functions related to the image created on the canvas (including animation) -->
-            <img id="Sprite" src="/Ryann96/images/Sprites.png">  // change sprite here
+            <img id="dogSprite" src="/Ryann96/images/dogSprites.png">  // change sprite here
         </canvas>
         <div id="controls"> <!--basic radio buttons which can be used to check whether each individual animaiton works -->
             <input type="radio" name="animation" id="idle" checked>
@@ -31,15 +31,15 @@ courses: { compsci: {week: 5} }
         const ctx = canvas.getContext('2d');
         const SPRITE_WIDTH = 160;  // matches sprite pixel width
         const SPRITE_HEIGHT = 144; // matches sprite pixel height
-        const FRAME_LIMIT = 4;  // matches number of frames per sprite row, this code assume each row is same
+        const FRAME_LIMIT = 48;  // matches number of frames per sprite row, this code assume each row is same
 
         const SCALE_FACTOR = 2;  // control size of sprite on canvas
         canvas.width = SPRITE_WIDTH * SCALE_FACTOR;
         canvas.height = SPRITE_HEIGHT * SCALE_FACTOR;
 
-        class Sprite {
+        class Dog {
             constructor() {
-                this.image = document.getElementById("Sprite");
+                this.image = document.getElementById("dogSprite");
                 this.x = 0;
                 this.y = 0;
                 this.minFrame = 0;
@@ -48,7 +48,7 @@ courses: { compsci: {week: 5} }
                 this.frameY = 0;
             }
 
-            // draw sprite object
+            // draw dog object
             draw(context) {
                 context.drawImage(
                     this.image,
@@ -73,8 +73,8 @@ courses: { compsci: {week: 5} }
             }
         }
 
-        // sprite object
-        const sprite = new Sprite();
+        // dog object
+        const dog = new Dog();
 
         // update frameY of dog object, action from idle, bark, walk radio control
         const controls = document.getElementById('controls');
@@ -83,13 +83,13 @@ courses: { compsci: {week: 5} }
                 const selectedAnimation = event.target.id;
                 switch (selectedAnimation) {
                     case 'idle':
-                        sprite.frameY = 0;
+                        dog.frameY = 0;
                         break;
                     case 'barking':
-                        sprite.frameY = 1;
+                        dog.frameY = 1;
                         break;
                     case 'walking':
-                        sprite.frameY = 2;
+                        dog.frameY = 2;
                         break;
                     default:
                         break;
@@ -103,10 +103,10 @@ courses: { compsci: {week: 5} }
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             // Draws the current frame of the sprite.
-            sprite.draw(ctx);
+            dog.draw(ctx);
 
             // Updates the `frameX` property to prepare for the next frame in the sprite sheet.
-            sprite.update();
+            dog.update();
 
             // Uses `requestAnimationFrame` to synchronize the animation loop with the display's refresh rate,
             // ensuring smooth visuals.
