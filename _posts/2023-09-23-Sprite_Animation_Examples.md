@@ -32,7 +32,7 @@ courses: { compsci: {week: 5} }
 
         //change numbers
         const SPRITE_WIDTH = 76;  // matches sprite pixel width
-        const SPRITE_HEIGHT = 68; // matches sprite pixel height
+        const SPRITE_HEIGHT = 6; // matches sprite pixel height
         const FRAME_LIMIT = 4;  // matches number of frames per sprite row, this code assume each row is same
 
         const SCALE_FACTOR = 2;  // control size of sprite on canvas
@@ -101,7 +101,7 @@ courses: { compsci: {week: 5} }
 
         
     // Animation control variables
-    const frameInterval = 100; // Adjust this value for the desired frame rate (e.g., 100ms for 10 frames per second)
+    const frameInterval = 1000; // Adjust this value for the desired frame rate (e.g., 100ms for 10 frames per second)
     let lastFrameTime = 0;
 
     // Animation recursive control function
