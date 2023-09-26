@@ -101,7 +101,7 @@ courses: { compsci: {week: 5} }
 
         
     // Animation control variables
-    const frameInterval = 100; // Adjust this value for the desired frame rate (e.g., 100ms for 10 frames per second)
+    const frameInterval = 40; // Adjust this value for the desired frame rate (e.g., 100ms for 10 frames per second)
     let lastFrameTime = 0;
 
     // Animation recursive control function
