@@ -31,8 +31,8 @@ courses: { compsci: {week: 5} }
         const ctx = canvas.getContext('2d');
 
         //change numbers
-        const SPRITE_WIDTH = 76;  // matches sprite pixel width
-        const SPRITE_HEIGHT = 65; // matches sprite pixel height
+        const SPRITE_WIDTH = 64;  // matches sprite pixel width
+        const SPRITE_HEIGHT = 64; // matches sprite pixel height
         const FRAME_LIMIT = 4;  // matches number of frames per sprite row, this code assume each row is same
 
         const SCALE_FACTOR = 2;  // control size of sprite on canvas
