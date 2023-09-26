@@ -120,8 +120,6 @@ courses: { compsci: {week: 5} }
         // Start the animation after the timeout.
         animate();
     }, 3000); // 3000 milliseconds (3 seconds) delay
-        // run 1st animate
-        animate();
 
     });
 </script>
