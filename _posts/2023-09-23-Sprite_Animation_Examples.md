@@ -99,8 +99,18 @@ courses: { compsci: {week: 5} }
             }
         });
 
-        // Animation recursive control function
-        function animate() {
+        
+    // Animation control variables
+    const frameInterval = 100; // Adjust this value for the desired frame rate (e.g., 100ms for 10 frames per second)
+    let lastFrameTime = 0;
+
+    // Animation recursive control function
+    function animate(currentTime) {
+        // Calculate the time elapsed since the last frame
+        const deltaTime = currentTime - lastFrameTime;
+
+        // Only update and draw a new frame if enough time has passed
+        if (deltaTime >= frameInterval) {
             // Clears the canvas to remove the previous frame.
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -110,16 +120,15 @@ courses: { compsci: {week: 5} }
             // Updates the `frameX` property to prepare for the next frame in the sprite sheet.
             character.update();
 
-            // Uses `requestAnimationFrame` to synchronize the animation loop with the display's refresh rate,
-            // ensuring smooth visuals.
-            requestAnimationFrame(animate);
+            // Store the current time as the last frame time
+            lastFrameTime = currentTime;
         }
-        //add timout
-        // Use setTimeout to delay the start of the animation by 3 seconds (3000 milliseconds).
-    setTimeout(function () {
-        // Start the animation after the timeout.
-        animate();
-    }, 3000); // 3000 milliseconds (3 seconds) delay
 
+        // Uses `requestAnimationFrame` to continue the animation loop.
+        requestAnimationFrame(animate);
+    }
+
+    // Start the animation loop immediately after the page has loaded.
+    requestAnimationFrame(animate); 
     });
 </script>
