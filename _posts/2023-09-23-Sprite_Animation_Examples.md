@@ -2,7 +2,7 @@
 toc: true
 comments: false
 layout: post
-title: Sprite Animation
+title: Sprite Animation 2
 description: Animating Sprites
 type: hacks
 courses: { compsci: {week: 5} }
@@ -29,6 +29,8 @@ courses: { compsci: {week: 5} }
     window.addEventListener('load', function () {
         const canvas = document.getElementById('spriteContainer');
         const ctx = canvas.getContext('2d');
+
+        //change numbers
         const SPRITE_WIDTH = 80;  // matches sprite pixel width
         const SPRITE_HEIGHT = 72; // matches sprite pixel height
         const FRAME_LIMIT = 4;  // matches number of frames per sprite row, this code assume each row is same
@@ -112,8 +114,14 @@ courses: { compsci: {week: 5} }
             // ensuring smooth visuals.
             requestAnimationFrame(animate);
         }
-
+        //add timout
+        // Use setTimeout to delay the start of the animation by 3 seconds (3000 milliseconds).
+    setTimeout(function () {
+        // Start the animation after the timeout.
+        animate();
+    }, 3000); // 3000 milliseconds (3 seconds) delay
         // run 1st animate
         animate();
+
     });
 </script>
