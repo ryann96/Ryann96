@@ -8,7 +8,9 @@ type: tangibles
 courses: { compsci: {week: 6} }
 ---
 
+<html>
 
+<body>
 <style>
   .multiline-paragraph {
     width: 1000px; /* Set the desired width */
