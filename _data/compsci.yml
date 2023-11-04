@@ -8,4 +8,9 @@ Unit2:
   title: Learn Language
   description: Learn (JavaScript|Python|Java).  Start Agile development process.
   start: 4
-  end: 11
+  end: 6
+Game:
+  title: Building a Game
+  description: Is Part of the Last 6 Weeks of the Trimester
+  start: 11
+  end: 12
