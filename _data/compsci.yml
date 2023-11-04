@@ -11,12 +11,6 @@ Unit2:
   end: 6
 Game:
   title: Building a Game
-<<<<<<< HEAD
   description: None
   start: 4
   end: 6
-=======
-  description: Is Part of the Last 6 Weeks of the Trimester
-  start: 7
-  end: 12
->>>>>>> 8074b78c39923268b4d16175770bd2decdf9c718
