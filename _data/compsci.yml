@@ -8,9 +8,4 @@ Unit2:
   title: Learn Language
   description: Learn (JavaScript|Python|Java).  Start Agile development process.
   start: 4
-  end: 6
-Game:
-  title: Building a Game
-  description: None
-  start: 4
-  end: 6
+  end: 7
